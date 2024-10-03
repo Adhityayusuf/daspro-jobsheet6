@@ -23,7 +23,7 @@ public class Pemilihan2Percobaan213 {
         qRis = input13.nextLine();
         System.out.println("-------------------------------------");
 
-        if (member.equalsIgnoreCase("y")) { 
+        if (member.equals("y")) { 
             diskon = 0.10;
             System.out.println("Besar diskon = 10%");
             if (pilihan_menu == 1) {
@@ -44,11 +44,19 @@ public class Pemilihan2Percobaan213 {
             }
              
              total_bayar = harga - (harga * diskon);
-             System.out.println("Total bayar setelah diskon = " + total_bayar);
+             System.out.println("Pembayaran dengan QRIS = " + qRis);
+
+             if (qRis.equals("y")) {
+                total_bayar -= 1000;
+                System.out.println("Besar potongan QRIS = " + 1000);
+             } else {
+                System.out.println("Besar potongan QRIS = " + 0);
+             }
+             System.out.println("Total Bayar = " + total_bayar);
             }
             
 
-            else if (member.equalsIgnoreCase("n")) { 
+            else if (member.equals("n")) { 
                 if (pilihan_menu == 1) {
                     harga = 14000;
                     System.out.println("Harga ricebowl = " + harga);
@@ -65,8 +73,19 @@ public class Pemilihan2Percobaan213 {
                     System.out.println(" Masukkkan menu dengan benar");
                     return; 
                 }
-                
-                System.out.println("Total bayar = " + harga);
+                total_bayar = harga;
+
+                System.out.println("Pembayaran dengan QRIS = " + qRis);
+
+                if (qRis.equals("y")) {
+                    total_bayar -= 1000;
+                    System.out.println("Besar Potongan QRIS = " + 1000);
+                } else {
+                    System.out.println("Besar Potongan QRIS = " + 0);
+                }
+
+                System.out.println("Total Bayar = " + total_bayar);
+
             } else {
                 System.out.println("Member tidak valid");
             }
