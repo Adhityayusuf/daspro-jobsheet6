@@ -4,8 +4,8 @@ public class Pemilihan2Percobaan213 {
         Scanner input13 = new Scanner(System.in);
 
         int pilihan_menu, jumlah_beli;
-        String member;
-        double diskon, total_bayar, harga;
+        String member, qRis;
+        double diskon, total_bayar, harga, potong;
 
         System.out.println("-------------------------");
         System.out.println("===== MENU KAFE JTI =====");
@@ -19,9 +19,11 @@ public class Pemilihan2Percobaan213 {
         input13.nextLine();
         System.out.print("Apakah punya member (y/n) ? = ");
         member = input13.nextLine();
+        System.out.print("Apakah menggunakan QRIS (y/n) ? = ");
+        qRis = input13.nextLine();
         System.out.println("-------------------------------------");
 
-        if (member.equalsIgnoreCase("y")) { // Menggunakan equalsIgnoreCase untuk membandingkan string
+        if (member.equalsIgnoreCase("y")) { 
             diskon = 0.10;
             System.out.println("Besar diskon = 10%");
             if (pilihan_menu == 1) {
@@ -38,15 +40,15 @@ public class Pemilihan2Percobaan213 {
 
             } else {
                 System.out.println("Massukan pilihan menu dengan benar");
-                return; // Menghentikan eksekusi lebih lanjut jika pilhan salah
+                return; 
             }
-             // Menghitung total bayar setelah diskon
+             
              total_bayar = harga - (harga * diskon);
              System.out.println("Total bayar setelah diskon = " + total_bayar);
             }
             
 
-            else if (member.equalsIgnoreCase("n")) { // Menggunakan equalsIgnoreCase untuk membandingkan string
+            else if (member.equalsIgnoreCase("n")) { 
                 if (pilihan_menu == 1) {
                     harga = 14000;
                     System.out.println("Harga ricebowl = " + harga);
@@ -61,9 +63,9 @@ public class Pemilihan2Percobaan213 {
 
                 } else {
                     System.out.println(" Masukkkan menu dengan benar");
-                    return; // Menghentikan eksekusi lebih lanjut jika pilhan salah
+                    return; 
                 }
-                // Menghitung total bayar
+                
                 System.out.println("Total bayar = " + harga);
             } else {
                 System.out.println("Member tidak valid");
