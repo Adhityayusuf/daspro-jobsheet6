@@ -1,7 +1,7 @@
 import java.util.Scanner;
 public class Pemilihan2Percobaan213 {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+        Scanner input13 = new Scanner(System.in);
 
         int pilihan_menu, jumlah_beli;
         String member;
@@ -15,10 +15,10 @@ public class Pemilihan2Percobaan213 {
         System.out.println("3. Paket Bunding (Ricebowl + Ice Tea)");
         System.out.println("-------------------------------------");
         System.out.print("masukkan angka dari menu yang dipilih = ");
-        pilihan_menu = sc.nextInt();
-        sc.nextLine();
+        pilihan_menu = input13.nextInt();
+        input13.nextLine();
         System.out.print("Apakah punya member (y/n) ? = ");
-        member = sc.nextLine();
+        member = input13.nextLine();
         System.out.println("-------------------------------------");
 
         if (member.equalsIgnoreCase("y")) { // Menggunakan equalsIgnoreCase untuk membandingkan string
